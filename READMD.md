@@ -1,6 +1,6 @@
 # PVS Specification Template
 
-This repository is to include the project setup and structure for a pvs specification.
+[PVS](https://github.com/SRI-CSL/PVS) is a specification language with a strong theorum prover. This repository is to include the project setup and structure for a pvs specification.
 
 ## Structure
 
