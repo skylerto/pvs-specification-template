@@ -1,0 +1,30 @@
+Time[delta: posreal]  : THEORY
+BEGIN
+  % digital time
+  DTIME : TYPE = nat
+  init(i : DTIME) : bool = i = 0 
+
+  % psuedo, digitized real time   
+  RTIME : TYPE = {t : nnreal | (EXISTS (i : DTIME) : t = i * delta)}
+
+  % actual time
+  TIME : TYPE = nnreal
+
+  % Positive DTIME
+  POS_DTIME: TYPE = posnat
+  
+  % conversions
+  r2d(t: RTIME): DTIME = t / delta
+  d2r(i: DTIME): RTIME = i * delta
+
+  % held_for is defined for negative times
+  % so that we don't need to guard those function applications
+  % in tables. If the period of held_for covers any negative time instant, 
+  % it is automatically false
+  DURATION: TYPE = nnreal
+  
+  held_for(p: pred[DTIME], d: DURATION)(i:DTIME): bool =
+    (FORALL (j: int): 
+      i - (d / delta) <= j AND j <= i IMPLIES 0 <= j AND p(j))
+
+END Time
