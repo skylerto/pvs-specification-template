@@ -1,0 +1,21 @@
+#! /bin/bash
+
+if [ ! -f top.summary ]; then
+  echo "***Cannot find top.summary, please execute from project root"
+else
+  echo "***Removing top.summary"
+  rm -rf top.summary
+fi
+
+
+if [ ! -d pvsbin/ ]; then
+  echo "***Cannot find pvsbin, please execute from project root"
+  exit 1;
+else
+  echo "***Removing pvsbin "
+  rm -rf pvsbin
+fi
+
+echo "*** Cleaning Complete"
+
+exit 0;

@@ -1,5 +1,10 @@
 #! /bin/bash
 
-cd ../
-echo "***Compiling Proof Report: "
-proveit --importchain --clean top.pvs
+if [ ! -d ./top.pvs ]; then
+  echo "***Cannot find top.pvs, please execute from project root"
+  exit 1;
+else
+  echo "***Compiling Proof Report: "
+  proveit --importchain --clean top.pvs -o top.summary
+fi
+exit 0;

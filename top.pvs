@@ -1,5 +1,6 @@
 % proveit --importchain --clean top.pvs
+
 top : THEORY
 BEGIN
-  IMPORTING Time
+   IMPORTING Time
 END top
