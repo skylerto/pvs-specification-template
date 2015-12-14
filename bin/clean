@@ -7,6 +7,13 @@ else
   rm -rf top.summary
 fi
 
+if [ ! -f .pvscontext ]; then
+  echo "***Cannot find .pvscontext, please execute from project root"
+else
+  echo "***Removing .pvscontext"
+  rm -rf .pvscontext
+fi
+
 
 if [ ! -d pvsbin/ ]; then
   echo "***Cannot find pvsbin, please execute from project root"
