@@ -21,9 +21,9 @@ Contains scripts to aid in the development of the specification
 
 ## Usage
 
-```
+```unix
 git clone https://www.github.com/skylerto/pvs-specification-template specification
-``` unix
+```
 
 ## License
 MIT © Skyler Layne
