@@ -10,9 +10,10 @@ Time.pvs is a construct to represent a specified timing resultion. I should be u
 ### top.pvs
 Include all specifications within this file.  
 To provide a proof report execute.
-```
+
+```unix
 proveit --importchain --clean top.pvs
-``` unix
+```
 
 ### bin
 Contains scripts to aid in the development of the specification
